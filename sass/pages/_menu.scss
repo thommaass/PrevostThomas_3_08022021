@@ -1,0 +1,254 @@
+.head {
+  display: flex;
+  height: 450px;
+  max-height: 450px;
+  width: 100%;
+  flex-flow: column;
+
+  img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    min-width: 100%;
+    z-index: 1;
+  }
+}
+
+body {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+
+.pagediv {
+  margin-top: -60px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #050505;
+  height: auto;
+  background-color: #f3f3f3;
+  border-top-left-radius: 31px;
+  border-top-right-radius: 31px;
+  align-items: flex-end;
+  flex-flow: column;
+}
+
+.toptitle {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+
+  h2 {
+    font-weight: bold;
+    font-size: 2em;
+  }
+
+  i {
+    padding-right: 15px;
+    font-size: 2.5em;
+    -webkit-text-stroke: 2px rgb(0, 0, 0);
+    color: transparent;
+    transition: all 0.3s;
+  }
+
+  i:hover {
+    background: -webkit-linear-gradient($color-primaire, $color-secondaire);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: $color-secondaire;
+    -webkit-text-stroke: initial;
+  }
+}
+
+.ENTREE {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-flow: column;
+  background-color: #f6f6f6;
+
+  h3 {
+    text-decoration: underline $color-tertiaire solid ;
+  
+  }
+}
+
+.PLATS {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-flow: column;
+  background-color: #f6f6f6;
+
+  h3 {
+    text-decoration: underline $color-tertiaire solid ;
+  }
+}
+
+.DESSERTS {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-flow: column;
+  background-color: #f6f6f6;
+  h3 {
+    text-decoration: underline $color-tertiaire solid ;
+  }
+}
+
+.divplat {
+  display: flex;
+  height: 100px;
+  width: 95%;
+  margin: 15px;
+  border-radius: 31px;
+  -webkit-box-shadow: 1px 1px 5px 0px black;
+  -moz-box-shadow: 1px 1px 5px 0px black;
+  box-shadow: 1px 1px 5px 0px black;
+  justify-content: space-between;
+  position: relative;
+  animation: select 0.5s;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation-fill-mode: both;
+  transform: scale(0);
+  overflow: hidden;
+
+  &__description {
+    width: 90%;
+    align-self: center;
+  }
+
+  &__right {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__conticon {
+    position: relative;
+    background-color: $color-tertiaire;
+    margin-right: -100px;
+    width: 100px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.5s;
+    border-top-right-radius: 31px;
+    border-bottom-right-radius: 31px;
+  }
+  &:hover &__conticon {
+    position: relative;
+    margin-right: 0px;
+  }
+
+  &__icon {
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    transform: rotate(180deg);
+    transition-duration: 0.5s;
+  }
+
+  &:hover &__icon {
+    transform: rotate(0);
+  }
+
+  h2 {
+    position: relative;
+    margin: 0px;
+    margin-left: 20px;
+    width: 100%;
+  }
+
+  h3 {
+    position: relative;
+    margin: 0px;
+    margin-left: 20px;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  h4 {
+    position: relative;
+    bottom: 0px;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-left: auto;
+    padding-right: 30px;
+  }
+}
+
+.btn {
+  align-items: center;
+  justify-content: center;
+  border-radius: 31px;
+  border: 0px;
+  background: -webkit-linear-gradient($color-primaire, $color-secondaire);
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  margin-right: auto;
+  margin-left: 275px;
+  margin-top: 40px;
+  margin-bottom: 35px;
+  width: 250px;
+  height: 55px;
+
+  &:hover
+      {
+        box-shadow: 10px 10px 10px rgb(0 0 0 / 90%);
+        border:black solid 2px;
+        opacity: 0.3;
+      }
+}
+
+@keyframes Fondu {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+
+  85% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@for $i from 1 through 9 {
+  .divplat:nth-of-type(#{$i}) {
+    animation-delay: #{$i * 0.3}s;
+  }
+}
+
+@keyframes select {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes anicon {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

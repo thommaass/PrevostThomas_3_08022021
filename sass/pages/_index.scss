@@ -1,0 +1,347 @@
+.explorer {
+  display: flex;
+  flex-flow: wrap;
+  height: 500px;
+  width: 100%;
+  background-color: #f6f6f6;
+  margin-top: 50px;
+
+  &__title {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+    height: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  &__subtitle {
+    width: 100%;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 100px;
+  }
+
+  &__localisation {
+    height: 110px;
+    width: 100%;
+    text-align: center;
+    background-color: #eaeaea;
+    vertical-align: middle;
+
+    p {
+      font-weight: bold;
+      font-size: 2em;
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    align-items: center;
+    justify-content: center;
+    border-radius: 31px;
+    border: 0px;
+    background: -webkit-linear-gradient($color-primaire, $color-secondaire);
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    margin-right: auto;
+    margin-left: auto;
+    width: 250px;
+    height: 55px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+
+      &:focus
+      {
+        border:black solid 2px;
+        opacity: 0.3;
+      }
+
+      &:hover
+      {
+        box-shadow: 10px 10px 10px rgb(0 0 0 / 90%);
+        border:black solid 2px;
+        opacity: 0.3;
+      }
+  }
+}
+
+.fa-map-marker-alt {
+  font-size: 1em;
+  margin-right: 20px;
+}
+
+.fonctionnement {
+  width: 100%;
+  height: 500px;
+
+  &__title {
+    display: flex;
+    font-weight: 600;
+    font-size: 2em;
+    margin-left: 10%;
+    width: 90%;
+    margin-right: auto;
+    margin-left: 15px;
+  }
+
+  &__divf {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    width: 93%;
+    border-radius: 25px;
+    -webkit-box-shadow: 1px 1px 2px 0px #e6e6e6;
+    -moz-box-shadow: 1px 1px 2px 0px #e6e6e6;
+    box-shadow: 1px 1px 2px 0px #e6e6e6;
+    position: relative;
+    justify-content: space-between;
+    margin-top: 30px;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: #f5edff;
+
+      i {
+        color: $color-primaire;
+      }
+    }
+
+    p {
+      font-weight: bold;
+      font-size: 1.6em;
+      width: 100%;
+      margin-top: auto;
+      margin-bottom: auto;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__circlep {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      background-color: $color-primaire;
+      display: flex;
+      margin-left: -20px;
+      opacity: 1;
+      margin-top: 30px;
+
+      p {
+        font-weight: bold;
+        font-size: 1.6em;
+        margin-left: 0px;
+        width: 100%;
+        margin-bottom: auto;
+        margin-top: 4px;
+        color: white;
+      }
+    }
+  }
+}
+.fa-mobile-alt {
+  margin-right: 30px;
+  color: #7e7e7e;
+}
+
+.fa-bars {
+  margin-right: 30px;
+  color: #7e7e7e;
+}
+
+.fa-ellipsis-v {
+  font-size: 1em;
+  color: #7e7e7e;
+  padding-bottom: 5px;
+  margin-right: 2px;
+}
+
+.fa-store {
+  margin-right: 30px;
+  color: #7e7e7e;
+}
+
+.resto {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  justify-content: space-around;
+  max-width: 100%;
+  border-radius: 0%;
+  height: 100%;
+  background-color: #f6f6f6;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  h2 {
+    display: flex;
+    font-weight: 600;
+    font-size: 2em;
+    margin-left: 10%;
+    width: 90%;
+    margin-right: auto;
+    margin-left: 15px;
+  }
+
+  &__card {
+    background-color: white;
+    border-radius: 31px;
+    -webkit-box-shadow: 1px 1px 2px 0px #e7e7e7;
+    -moz-box-shadow: 1px 1px 2px 0px #e7e7e7;
+    box-shadow: 1px 1px 2px 0px #e7e7e7;
+  }
+
+  &__aresto {
+    max-width: 750px;
+    height: 350px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+.resto__card__restaurant {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  margin-left: auto;
+  margin-left: auto;
+  flex-flow: wrap;
+  position: relative;
+
+  &__new {
+    display: flex;
+    position: absolute;
+    height: 70px;
+    width: 180px;
+    color: $color-tertiaire;
+    background-color: $color-tertiaire;
+    border-radius: 5px;
+    right: 15px;
+    top: 15px;
+
+    h3 {
+      color: #0f9070;
+      font-weight: bold;
+      margin: auto;
+      font-size: 1.8em;
+    }
+  }
+
+  h2 {
+    font-size: 2em;
+    font-weight: bold;
+    max-width: 350px;
+    margin: 0px;
+    margin-left: 15px;
+  }
+
+  p {
+    font-size: 1.4em;
+    max-width: 150px;
+    margin: 0px;
+    max-width: 80%;
+    margin-left: 15px;
+  }
+
+  img {
+    object-fit: cover;
+    max-height: 70%;
+    max-width: 100%;
+    min-width: 100%;
+    border-top-left-radius: 31px;
+    border-top-right-radius: 31px;
+  }
+
+  i {
+    padding-right: 15px;
+    font-size: 3em;
+    -webkit-text-stroke: 2px rgb(0, 0, 0);
+    color: transparent;
+    transition: all 0.3s;
+    position: absolute;
+    right: 20px;
+    bottom: 35px;
+  }
+
+  i:hover {
+    background: -webkit-linear-gradient($color-primaire, $color-secondaire);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color: transparent;
+    color: $color-secondaire;
+    -webkit-text-stroke: initial;
+  }
+}
+
+.clr:hover {
+  background: -webkit-linear-gradient($color-primaire, $color-secondaire);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: $color-secondaire;
+  -webkit-text-stroke: initial;
+}
+
+.spin {
+  background-color: white;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: -1;
+  animation: spinn 3s linear 1;
+  opacity: 0;
+
+  &__loader {
+    animation: loaded 3s linear 1;
+    clip: rect(0, 80px, 80px, 40px);
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    left: calc(50% - 40px);
+    top: calc(50% - 40px);
+    box-shadow: inset black 0 0 0 17px;
+    border-radius: 50%;
+  }
+}
+@keyframes loaded {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(110deg);
+  }
+
+  100% {
+    transform: rotate(220deg);
+  }
+}
+/* .loader:after {
+      animation: loaded 1.5s ease-in-out infinite;
+      clip: rect(0, 80px, 80px, 40px);
+      content:'';
+      border-radius: 50%; 
+      height: 80px;
+      width: 80px;
+      position: absolute; 
+    } 
+  */
+@keyframes spinn {
+  0% {
+    opacity: 1;
+    z-index: 2;
+  }
+
+  100% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
